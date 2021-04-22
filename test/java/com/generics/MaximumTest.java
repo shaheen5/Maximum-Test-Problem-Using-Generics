@@ -29,4 +29,9 @@ public class MaximumTest {
         Float maximumFloat = Maximum.findMaximumFloat(6.6f,8.5f,7.8f);
         Assert.assertEquals(8.5f, maximumFloat,0.0f);
     }
+    @Test
+    public void givenMaxFloatNumber_AtThirdPosition_ShouldReturnSameNumber() {
+        Float maximumFloat = Maximum.findMaximumFloat(6.6f,7.8f,8.5f);
+        Assert.assertEquals(8.5f, maximumFloat,0.0f);
+    }
 }
