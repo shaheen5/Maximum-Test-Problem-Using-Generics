@@ -9,4 +9,9 @@ public class MaximumTest {
         int maximumInteger = Maximum.findMaximumInteger(9,5,2);
         Assert.assertEquals(9, maximumInteger);
     }
+    @Test
+    public void givenMaxNumber_AtSecondPosition_ShouldReturnSameNumber() {
+        int maximumInteger = Maximum.findMaximumInteger(5,9,2);
+        Assert.assertEquals(9, maximumInteger);
+    }
 }
