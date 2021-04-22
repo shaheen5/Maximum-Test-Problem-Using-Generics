@@ -14,4 +14,9 @@ public class MaximumTest {
         int maximumInteger = Maximum.findMaximumInteger(5,9,2);
         Assert.assertEquals(9, maximumInteger);
     }
+    @Test
+    public void givenMaxNumber_AtThirdPosition_ShouldReturnSameNumber() {
+        int maximumInteger = Maximum.findMaximumInteger(2,5,9);
+        Assert.assertEquals(9, maximumInteger);
+    }
 }
