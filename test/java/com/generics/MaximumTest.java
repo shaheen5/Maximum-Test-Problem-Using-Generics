@@ -34,4 +34,9 @@ public class MaximumTest {
         Float maximumFloat = Maximum.findMaximumFloat(6.6f,7.8f,8.5f);
         Assert.assertEquals(8.5f, maximumFloat,0.0f);
     }
+    @Test
+    public void givenMaxString_AtFirstPosition_ShouldReturnSameString() {
+        String maximumString = Maximum.findMaximumString("Peach","Apple","Banana");
+        Assert.assertEquals("Peach", maximumString);
+    }
 }
