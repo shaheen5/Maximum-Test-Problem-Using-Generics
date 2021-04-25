@@ -1,58 +1,22 @@
 package com.generics;
 
 public class Maximum {
-    //method to find maximum among three integers
-    public static Integer findMaximumInteger(Integer x, Integer y, Integer z){
-        Integer max = x;
+    //method to determine largest of three comparable objects
+    public static <T extends Comparable<T>> T findMaximumValue(T x, T y, T z){
+        T max = x; //assume x is initially the largest
         if(y.compareTo(max) > 0){
-            max = y;
+            max = y; // y is the largest so far
         }
         if(z.compareTo(max) > 0){
-            max = z;
+            max = z; //z is the largest now
         }
-        printMaximumValue(x, y, z, max);
-        return max;
+        return max; //returns the largest object
     }
-    //method to display maximum value among three integers
-    private static void printMaximumValue(Integer x, Integer y, Integer z, Integer max){
-        System.out.println("Maximum integer value among "+x+" , "+y+" , "+z+" is :"+max);
-    }
-    //method to find maximum among three float values
-    public static Float findMaximumFloat(Float x, Float y, Float z){
-        Float max = x;
-        if(y.compareTo(max) > 0){
-            max = y;
-        }
-        if(z.compareTo(max) > 0){
-            max = z;
-        }
-        printMaximumValue(x, y, z, max);
-        return max;
-    }
-    //method to display maximum value among three floats
-    private static void printMaximumValue(Float x, Float y, Float z, Float max){
-        System.out.println("Maximum float value among "+x+" , "+y+" , "+z+" is :"+max);
-    }
-    //method to find maximum among three strings
-    public static String findMaximumString(String x, String y, String z){
-        String max = x;
-        if(y.compareTo(max) > 0){
-            max = y;
-        }
-        if(z.compareTo(max) > 0){
-            max = z;
-        }
-        printMaximumValue(x, y, z, max);
-        return max;
-    }
-    //method to display maximum among three strings
-    private static void printMaximumValue(String x, String y, String z, String max){
-        System.out.println("Maximum String value among "+x+" , "+y+" , "+z+" is :"+max);
-    }
+
     public static void main(String[] args) {
         System.out.println("Problem To Find Maximum Among Three Using Generics !");
-        findMaximumInteger(9,5,2);
-        findMaximumFloat(6.6f,7.8f,8.5f);
-        findMaximumString("Apple","Peach","Banana");
+        findMaximumValue(9,5,2);
+        findMaximumValue(6.6f,7.8f,8.5f);
+        findMaximumValue("Apple","Peach","Banana");
     }
 }
