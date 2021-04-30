@@ -1,6 +1,15 @@
 package com.generics;
 
-public class Maximum {
+public class Maximum <T extends Comparable<T>> {
+    T x, y, z;
+    public Maximum(T x, T y, T z){
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+    public T findMaximumValue(){
+        return Maximum.findMaximumValue(x, y, z);
+    }
     //method to determine largest of three comparable objects
     public static <T extends Comparable<T>> T findMaximumValue(T x, T y, T z){
         T max = x; //assume x is initially the largest
