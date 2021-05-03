@@ -20,12 +20,15 @@ public class Maximum <T extends Comparable<T>> {
     public Optional<T> findMaximumValue(T... parameters) {
         Optional<T> max;
         max = stream(parameters).sorted(Comparator.reverseOrder()).findFirst();
-        printMaximumValue(max);
+        printMaximumValue(max,parameters);
         return max;
     }
     //method to display largest among all
-    private void printMaximumValue(Optional<T> max){
-        System.out.println("Maximum Element ="+max);
+    private void printMaximumValue(Optional<T> max, T ...parameters){
+        System.out.print("Elements :");
+        for(T element : parameters)
+            System.out.print(element+" ");
+        System.out.println("\nMaximum Element ="+max);
     }
 
 
